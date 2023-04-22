@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/save
+Content-Type: application/json
+
+{
+  "from": "Ivan",
+  "message": "Este es un mensaje de prueba"
+}

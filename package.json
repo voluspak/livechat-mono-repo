@@ -1,0 +1,25 @@
+{
+  "name": "livechat",
+  "version": "1.0.0",
+  "description": "",
+  "private": "true",
+  "main": "index.js",
+  "workspaces": [
+    "livechat-backend",
+    "livechat-frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=livechat-frontend",
+    "start": "npm run start --workspace=livechat-backend",
+    "dev:api": "npm run build && npm run dev --workspace=livechat-backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
