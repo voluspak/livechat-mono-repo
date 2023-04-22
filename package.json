@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspace=livechat-frontend",
-    "start": "npm run start --workspace=livechat-backend",
+    "start": "npm run build && npm run start --workspace=livechat-backend",
     "dev:api": "npm run build && npm run dev --workspace=livechat-backend"
   },
   "keywords": [],
