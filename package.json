@@ -8,6 +8,10 @@
     "livechat-backend",
     "livechat-frontend"
   ],
+  "engines": {
+    "npm": "9.6.4",
+    "node": "18.15.5"
+  },
   "scripts": {
     "build": "npm run build --workspace=livechat-frontend",
     "start": "npm run start --workspace=livechat-backend",
