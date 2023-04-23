@@ -1,16 +1,16 @@
 import '../App.css'
+import { useScrollbarPosition } from '../hooks/useScrollbarPosition'
 
 
 
 export const MessagesDisplay = ({ messages, storedMessages, nickname }) => {
-  const scrollbarContainer = useScrollbarPosition(storedMessages)
+  const scrollbarContainer = useScrollbarPosition({storedMessages, messages})
 
 
   return (
-    <div className='card-body inputAndMessagesContainer' ref={scrollbarContainer}>
+    <div className='card-body inputAndMessagesContainer position-relative' ref={scrollbarContainer}>
 
       {/* MENSAJES ALMACENADOS */}
-      <small className='text-center text-muted'>Mensajes guardados</small>
 
       {storedMessages.map((message) => (
         <div key={message._id} className={`border border-danger d-flex p-3 ${message.from === nickname ? 'justify-content-end' : 'justify-content-start'}`}>
@@ -21,6 +21,7 @@ export const MessagesDisplay = ({ messages, storedMessages, nickname }) => {
           </div>
         </div>
       ))}
+      <small className='text-center text-muted position-sticky top-0 start-0'>Mensajes guardados</small>
 
       {/* MENSAJES RECIENTES */}
       {messages.map((message) => {

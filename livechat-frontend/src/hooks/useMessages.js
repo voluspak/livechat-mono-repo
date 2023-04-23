@@ -63,7 +63,6 @@ export function useMessages () {
     // petición POST para guardar el mensaje
 
     saveMessage({ newMessage, nickname })
-      .then(resp => console.log(resp))
   }
 
   const nicknameIsSetted = nickname !== '' && nickname !== undefined

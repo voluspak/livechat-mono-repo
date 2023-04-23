@@ -3,7 +3,8 @@ import { useEffect, useRef } from "react"
 export function useScrollbarPosition (effectDependencies) {
   const scrollbarContainer = useRef(null)
   useEffect(() => {
-    scrollbarContainer.current.scrollTop = 1389
+    const scrollbarContainerHeight = scrollbarContainer.current.scrollHeight
+    scrollbarContainer.current.scrollTop = scrollbarContainerHeight
   
   }, [effectDependencies ?? null])
 
