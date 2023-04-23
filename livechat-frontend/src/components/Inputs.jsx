@@ -2,7 +2,6 @@
 const Inputs = ({ handleNicknameSubmit, nicknameIsSetted, handleMessageSubmit }) => {
   return (
     <div className='card-body'>
-      <h5 className='text-center'>Chat</h5>
 
       {/* Nickname */}
       <form className='mb-3' onSubmit={handleNicknameSubmit}>

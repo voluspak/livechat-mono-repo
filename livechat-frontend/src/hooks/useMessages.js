@@ -4,7 +4,7 @@ import { getOldMessages, saveMessage } from '../services/messages'
 import { getFormData } from '../services/formData'
 
 // ---- Conexion a Socket.io ----
-const socket = io('/')
+const socket = io('http://localhost:3001/')
 
 export function useMessages () {
   const [nickname, setNickname] = useState('')

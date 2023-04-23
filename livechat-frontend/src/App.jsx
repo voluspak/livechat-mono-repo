@@ -12,19 +12,18 @@ function App () {
     <>
       <main className='container mt-3'>
         <div className='card'>
-          <Inputs
-            handleMessageSubmit={handleMessageSubmit}
-            handleNicknameSubmit={handleNicknameSubmit}
-            nicknameIsSetted={nicknameIsSetted}
-          />
           <div className='mt-3 mb-3 card' id='content-chat'>
             <MessagesDisplay
               nickname={nickname}
               storedMessages={storedMessages}
               messages={messages}
             />
+            <Inputs
+              handleMessageSubmit={handleMessageSubmit}
+              handleNicknameSubmit={handleNicknameSubmit}
+              nicknameIsSetted={nicknameIsSetted}
+            />
           </div>
-
         </div>
       </main>
     </>

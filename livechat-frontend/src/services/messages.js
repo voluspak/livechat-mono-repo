@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const urlAPI = '/api'
+const urlAPI = 'http://localhost:3001/api'
 
 export async function getOldMessages () {
   try {

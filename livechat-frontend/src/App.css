@@ -10,3 +10,9 @@ body {
   background: linear-gradient(to right, #96c93d, #00b09b);
 
 }
+
+.inputAndMessagesContainer {
+  max-height: 60vh;
+  overflow-y: scroll;
+  
+}
