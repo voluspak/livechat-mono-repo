@@ -1,7 +1,7 @@
 import './App.css'
 import Inputs from './components/Inputs'
 import MessagesDisplay from './components/MessagesDisplay'
-import { useMessages } from './hookse/useMessages'
+import { useMessages } from './hooks/useMessages'
 
 function App () {
   const {

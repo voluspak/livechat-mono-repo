@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const urlAPI = '/api'
 
-export async function getAllMessages () {
+export async function getOldMessages () {
   try {
     const response = await axios.get(`${urlAPI}/save`)
     return response.data

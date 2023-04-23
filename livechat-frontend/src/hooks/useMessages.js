@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client'
 import { useState, useEffect } from 'react'
-import { getAllMessages, saveMessage } from '../services/messages'
+import { getOldMessages, saveMessage } from '../services/messages'
 import { getFormData } from '../services/formData'
 
 // ---- Conexion a Socket.io ----
@@ -13,7 +13,7 @@ export function useMessages () {
   const [storedMessages, setStoredMessages] = useState([])
 
   useEffect(() => { // <--- getting all messagges from DB
-    getAllMessages()
+    getOldMessages()
       .then(resp => setStoredMessages(resp.messages))
       .catch(error => console.log(error))
   }, [])
